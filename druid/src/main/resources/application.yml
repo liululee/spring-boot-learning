@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    druid:
+      url: jdbc:mysql://120.79.222.252:3306/javashop?allowMultiQueries:true&characterEncoding:UTF-8&zeroDateTimeBehavior:convertToNull
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      # 连接池配置
+      initial-size: 1
+      max-active: 20
+      min-idle: 1
+      max-wait: 10000
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      validation-query: SELECT 1 FROM DUAL
+      validation-query-timeout: 5000
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 30000
+      max-evictable-idle-time-millis: 60000
+      removeAbandoned: true
+      removeAbandonedTimeout: 1800
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall #filters: # 配置多个英文逗号分隔(统计，sql注入，log4j过滤)
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+app:
+  druid:
+    username: druid
+    password: 123456
+    reset-all: true
