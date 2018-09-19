@@ -1,0 +1,33 @@
+spring:
+  ## multipart datasource configuration ##
+  datasource:
+    primary:
+      jdbc-url: jdbc:mysql://120.79.222.252:3306/javashop
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+    secondary:
+      jdbc-url: jdbc:mysql://120.79.222.252:3306/javashop
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+    master:
+      jdbc-url: jdbc:mysql://120.79.222.252:3306/javashop
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+    cluster:
+      jdbc-url: jdbc:mysql://120.79.222.252:3306/javashop
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
