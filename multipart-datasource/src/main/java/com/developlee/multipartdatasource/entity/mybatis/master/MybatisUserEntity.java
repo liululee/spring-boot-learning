@@ -11,6 +11,6 @@ import lombok.Data;
 public class MybatisUserEntity {
     private long id;
     private String username;
-    private String password;
+    private String pwd;
     private String mobile;
 }

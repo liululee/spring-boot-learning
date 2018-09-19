@@ -3,7 +3,6 @@ package com.developlee.multipartdatasource.entity.jpa.primary;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 /**
  * @author Lensen
@@ -13,8 +12,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "tb_user")
 @Data
-public class UserEntity implements Serializable {
-    private final Long serialVersion = -511345623L;
+public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +20,7 @@ public class UserEntity implements Serializable {
     @Column
     private String username;
     @Column
-    private String password;
+    private String pwd;
     @Column
     private String mobile;
 

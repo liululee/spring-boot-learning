@@ -10,5 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @since 2018/8/27 16:07
  */
 public interface CityRepository  extends JpaRepository<CityEntity, Long> {
-    CityEntity findByUserEntity(UserEntity userEntity);
+    @Override
+    <S extends CityEntity> S save(S s);
+
 }

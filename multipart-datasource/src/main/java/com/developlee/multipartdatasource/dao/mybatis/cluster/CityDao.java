@@ -1,7 +1,7 @@
 package com.developlee.multipartdatasource.dao.mybatis.cluster;
 
-import com.developlee.multipartdatasource.entity.jpa.secondary.CityEntity;
+import com.developlee.multipartdatasource.entity.mybatis.cluster.MybatisCityEntity;
 
 public interface CityDao {
-    CityEntity findCityByUserId(Long userId);
+    void save(MybatisCityEntity mybatisCityEntity);
 }

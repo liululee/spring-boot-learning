@@ -18,7 +18,7 @@ public class CityEntity {
     private Long id;
 
     @Column
-    private String desc;
+    private String description;
 
     @Column
     private Long userId;

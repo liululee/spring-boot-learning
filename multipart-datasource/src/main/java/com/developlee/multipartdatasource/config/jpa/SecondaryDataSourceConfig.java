@@ -13,6 +13,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.annotation.Resource;
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.util.Map;
@@ -25,15 +26,15 @@ import java.util.Map;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-        entityManagerFactoryRef="secondaryEntityManagerFactory",
-        transactionManagerRef="secondaryTransactionManager",
-        basePackages= { SecondaryDataSourceConfig.REPO_PACKAGES }) //设置Repository所在位置
+        entityManagerFactoryRef = "secondaryEntityManagerFactory",
+        transactionManagerRef = "secondaryTransactionManager",
+        basePackages = {SecondaryDataSourceConfig.REPO_PACKAGES}) //设置Repository所在位置
 public class SecondaryDataSourceConfig {
 
-    static final String REPO_PACKAGES = "com.develop.multipartdatasource.dao.jpa.secondary";
+    static final String REPO_PACKAGES = "com.developlee.multipartdatasource.dao.jpa.secondary";
     static final String ENTITY_PACKAGES = "com.developlee.multipartdatasource.entity.jpa.secondary";
 
-    @Autowired
+    @Resource
     @Qualifier("secondaryDataSource")
     private DataSource secondaryDataSource;
 
@@ -43,7 +44,7 @@ public class SecondaryDataSourceConfig {
     }
 
     @Bean(name = "secondaryEntityManagerFactory")
-    public LocalContainerEntityManagerFactoryBean secondaryEntityManagerFactory (EntityManagerFactoryBuilder builder) {
+    public LocalContainerEntityManagerFactoryBean secondaryEntityManagerFactory(EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(secondaryDataSource)
                 .properties(getVendorProperties())
@@ -52,7 +53,7 @@ public class SecondaryDataSourceConfig {
                 .build();
     }
 
-    @Autowired
+    @Resource
     private JpaProperties jpaProperties;
 
     private Map<String, Object> getVendorProperties() {
@@ -63,4 +64,5 @@ public class SecondaryDataSourceConfig {
     PlatformTransactionManager secondaryTransactionManager(EntityManagerFactoryBuilder builder) {
         return new JpaTransactionManager(secondaryEntityManagerFactory(builder).getObject());
     }
+
 }

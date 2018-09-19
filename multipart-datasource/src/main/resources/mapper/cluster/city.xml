@@ -5,4 +5,7 @@
     <select id="findCityByUserId" parameterType="java.lang.Long" resultType="com.developlee.multipartdatasource.entity.jpa.secondary.CityEntity">
         select * from tb_city where user_id = #{userId}
     </select>
+    <insert id="save" parameterType="com.developlee.multipartdatasource.entity.mybatis.cluster.MybatisCityEntity">
+        insert into tb_city VALUES (#{id} ,#{desc} ,#{userId})
+    </insert>
 </mapper>

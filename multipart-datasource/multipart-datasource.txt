@@ -1,0 +1,82 @@
+卷 文档 的文件夹 PATH 列表
+卷序列号为 0000-4823
+E:.
+│  multipart-datasource.iml
+│  multipart-datasource.txt
+│  pom.xml
+│  
+└─src
+    ├─main
+    │  ├─java
+    │  │  └─com
+    │  │      └─developlee
+    │  │          └─multipartdatasource
+    │  │              │  MultipartDatasourceApplication.java
+    │  │              │  
+    │  │              ├─config
+    │  │              │  ├─jpa
+    │  │              │  │      DataSourceConfig.java
+    │  │              │  │      PrimaryDataSourceConfig.java
+    │  │              │  │      SecondaryDataSourceConfig.java
+    │  │              │  │      
+    │  │              │  └─mybatis
+    │  │              │          ClusterDataSourceConfig.java
+    │  │              │          MasterDataSourceConfig.java
+    │  │              │          
+    │  │              ├─dao
+    │  │              │  ├─jpa
+    │  │              │  │  ├─primary
+    │  │              │  │  │      UserRepository.java
+    │  │              │  │  │      
+    │  │              │  │  └─secondary
+    │  │              │  │          CityRepository.java
+    │  │              │  │          
+    │  │              │  └─mybatis
+    │  │              │      ├─cluster
+    │  │              │      │      CityDao.java
+    │  │              │      │      
+    │  │              │      └─master
+    │  │              │              UserDao.java
+    │  │              │              
+    │  │              ├─entity
+    │  │              │  ├─jpa
+    │  │              │  │  ├─primary
+    │  │              │  │  │      UserEntity.java
+    │  │              │  │  │      
+    │  │              │  │  └─secondary
+    │  │              │  │          CityEntity.java
+    │  │              │  │          
+    │  │              │  └─mybatis
+    │  │              │      ├─cluster
+    │  │              │      │      MybatisCityEntity.java
+    │  │              │      │      
+    │  │              │      └─master
+    │  │              │              MybatisUserEntity.java
+    │  │              │              
+    │  │              └─service
+    │  │                  │  CityService.java
+    │  │                  │  UserService.java
+    │  │                  │  
+    │  │                  └─impl
+    │  │                          CityServiceImpl.java
+    │  │                          UserServiceImpl.java
+    │  │                          
+    │  └─resources
+    │      │  application.yml
+    │      │  
+    │      ├─mapper
+    │      │  ├─cluster
+    │      │  │      city.xml
+    │      │  │      
+    │      │  └─master
+    │      │          user.xml
+    │      │          
+    │      ├─static
+    │      └─templates
+    └─test
+        └─java
+            └─com
+                └─developlee
+                    └─multipartdatasource
+                            MultipartDatasourceApplicationTests.java
+                            

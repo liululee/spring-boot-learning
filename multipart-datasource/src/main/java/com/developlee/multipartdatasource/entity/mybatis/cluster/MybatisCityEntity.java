@@ -11,5 +11,5 @@ import lombok.Data;
 public class MybatisCityEntity {
     private long id;
     private String desc;
-    private String userId;
+    private Long userId;
 }

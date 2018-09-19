@@ -14,6 +14,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.annotation.Resource;
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 
@@ -30,25 +31,25 @@ import javax.sql.DataSource;
 public class PrimaryDataSourceConfig {
 
     static final String REPO_PACKAGE = "com.developlee.multipartdatasource.dao.jpa.primary";
-    static final String ENTITY_PACKAGE = "com.developlee.multipartdatasourc.entity.jpa.primary";
+    static final String ENTITY_PACKAGE = "com.developlee.multipartdatasource.entity.jpa.primary";
 
-    @Autowired
+    @Resource
     @Qualifier("primaryDataSource")
-    private DataSource dataSource;
+    private DataSource primaryDataSource;
 
-    @Autowired
+    @Resource
     private JpaProperties jpaProperties;
 
     @Primary
     @Bean(name = "primaryEntityManager")
-    public EntityManager entityManager(EntityManagerFactoryBuilder builder) {
+    public EntityManager primaryEntityManager(EntityManagerFactoryBuilder builder) {
        return primaryEntityManagerFactory(builder).getObject().createEntityManager();
     }
 
     @Primary
     @Bean(name = "primaryEntityManagerFactory")
     public LocalContainerEntityManagerFactoryBean primaryEntityManagerFactory(EntityManagerFactoryBuilder builder) {
-        return builder.dataSource(dataSource)
+        return builder.dataSource(primaryDataSource)
                 .properties(jpaProperties.getHibernateProperties(new HibernateSettings()))
                 .persistenceUnit("primaryPersistenceUnit")
                 .packages(ENTITY_PACKAGE)
