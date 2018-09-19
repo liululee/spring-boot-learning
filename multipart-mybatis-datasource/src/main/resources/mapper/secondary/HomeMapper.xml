@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 4.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.developlee.multipartmybatisdatasource.dao.secondary.HomeDao">
+    <insert id="saveHome" parameterType="com.developlee.multipartmybatisdatasource.entity.secondary.HomeEntity">
+        insert into tb_home (id, city, town, userId) VALUES
+        (#{id}, #{city}, #{town}, #{userId})
+    </insert>
+    <select id="getHomeByUserId" parameterType="java.lang.Long" resultType="com.developlee.multipartmybatisdatasource.entity.secondary.HomeEntity">
+        select * from  tb_home where userId = #{userId}
+    </select>
+</mapper>
