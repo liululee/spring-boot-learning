@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.developlee.quartz.models.dao.TaskDao">
+    <select id="findTaskList" resultType="com.developlee.quartz.models.domain.vo.TaskEntity">
+        SELECT
+        QRTZ_JOB_DETAILS.JOB_NAME AS jobName,
+        QRTZ_JOB_DETAILS.JOB_GROUP AS jobGroup,
+        QRTZ_JOB_DETAILS.JOB_CLASS_NAME AS jobClass,
+        QRTZ_TRIGGERS.DESCRIPTION AS jobDescription,
+        QRTZ_TRIGGERS.TRIGGER_NAME AS triggerName,
+        QRTZ_TRIGGERS.TRIGGER_GROUP AS triggerGroup,
+        QRTZ_CRON_TRIGGERS.CRON_EXPRESSION AS cronExpression,
+        QRTZ_TRIGGERS.START_TIME AS startTime,
+        QRTZ_TRIGGERS.END_TIME AS endTime,
+        QRTZ_TRIGGERS.TRIGGER_STATE AS state,
+        QRTZ_CRON_TRIGGERS.TIME_ZONE_ID AS timeZoneId
+        FROM
+        QRTZ_JOB_DETAILS
+        JOIN QRTZ_TRIGGERS
+        JOIN QRTZ_CRON_TRIGGERS ON QRTZ_JOB_DETAILS.JOB_NAME = QRTZ_TRIGGERS.JOB_NAME
+        AND QRTZ_TRIGGERS.TRIGGER_NAME = QRTZ_CRON_TRIGGERS.TRIGGER_NAME
+        AND QRTZ_TRIGGERS.TRIGGER_GROUP = QRTZ_CRON_TRIGGERS.TRIGGER_GROUP
+    </select>
+
+</mapper>

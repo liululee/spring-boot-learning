@@ -1,0 +1,65 @@
+ spring:
+   datasource:
+     druid:
+       url: jdbc:mysql://192.168.0.100:3309/welend?allowMultiQueries:true&characterEncoding:UTF-8&zeroDateTimeBehavior:convertToNull
+       username: root
+       password: 123456
+       driver-class-name: com.mysql.jdbc.Driver
+       initial-size: 1
+       max-active: 20
+       min-idle: 1
+       max-wait: 10000
+       pool-prepared-statements: true
+       max-open-prepared-statements: 20
+       validation-query: SELECT 1 FROM DUAL
+       validation-query-timeout: 5000
+       test-on-borrow: false
+       test-on-return: false
+       test-while-idle: true
+       time-between-eviction-runs-millis: 60000
+       min-evictable-idle-time-millis: 30000
+       max-evictable-idle-time-millis: 60000
+       removeAbandoned: true
+       removeAbandonedTimeout: 1800
+       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+       max-pool-prepared-statement-per-connection-size: 20
+       filters: stat,wall
+     type: com.alibaba.druid.pool.DruidDataSource
+   mvc:
+     throw-exception-if-no-handler-found: true #
+   resources:
+     add-mappings: false # don't build reflection for resources
+#--- mybatis configurations ---#
+#mybatis:
+#  mapper-locations: classpath:mapper/**/*.xml
+#  type-aliases-package: com.developlee.quartz.models.domain.vo
+#--- mybatis configurations ---#
+#--- custom configurations ---#
+ app:
+   quartz:
+      scheduler:
+        instance-name: welendScheduler
+        instance-id: NON_CLUSTERED
+        skip-update-check: true
+        job-factory:
+          class: org.quartz.simpl.SimpleJobFactory
+      job-store:
+        class: org.quartz.impl.jdbcjobstore.JobStoreTX
+        driver-delegate-class: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+        datasource: quartzDataSource
+        table-prefix: QRTZ_
+        is-clustered: true
+      thread-pool:
+        class: org.quartz.simpl.SimpleThreadPool
+        thread-count: 5
+      datasource:
+        quartzDataSource:
+          driver: ${spring.datasource.druid.driver-class-name}
+          url: ${spring.datasource.druid.url}
+          user: ${spring.datasource.druid.username}
+          password: ${spring.datasource.druid.password}
+          maxConnections: 5
+          validationQuery: select 0
+          connection-provider:
+            class: com.developlee.quartz.config.quartz.DruidConnectionProvider
+#--- custom configurations ---#
