@@ -1,0 +1,11 @@
+one-app:
+  app-name: OneAPP
+  account:
+    username: Lensen
+    password: Orcl
+    age: 22
+
+two-app:
+  welcome:
+    message: welcome to lensen's bolg
+    person: LENSEN
