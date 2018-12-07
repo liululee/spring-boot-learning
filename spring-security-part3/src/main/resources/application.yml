@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://120.79.222.252:3306/test
+    hikari:
+      minimum-idle: 1
+      max-lifetime: 3000
+  jpa:
+    hibernate:
+      ddl-auto: update
+  thymeleaf:
+    cache: false
+    mode: HTML5
+    suffix: .html
+
