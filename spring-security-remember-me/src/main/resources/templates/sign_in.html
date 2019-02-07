@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf-Login-Demo</title>
+</head>
+<body>
+<div id="header">
+    <h2>登录示例页面-供参考</h2>
+    <strong>demo login page for example</strong>
+    <p th:if="${param.error}">登录失败！</p>
+</div>
+<div id="container">
+    <form th:action="@{/auth/login}" method="post">
+        <input name="username" type="text" placeholder="用户名"/>
+        <br/>
+        <input name="password" type="password" placeholder="密码"/>
+        <br/>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        <br/>
+        <input name="validateCode" type="text" placeholder="请输入验证码">
+        <input type="image" src="http://localhost:8080/code/image"/>
+        <br/>
+        <span><input name="rememberMe" type="checkbox" th:value="true">记住我</span>
+        <br/>
+        <input type="submit" th:value="登录"/>
+        <br/>
+    </form>
+</div>
+</body>
+</html>

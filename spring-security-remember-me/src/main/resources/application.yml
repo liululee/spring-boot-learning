@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://120.79.222.252:3306/test
+    username: root
+    password: 123456
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      minimum-idle: 5
+      maximum-pool-size: 20
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    suffix: .html
+    encoding: UTF-8
+    cache: false #开发环境下，关闭缓存 实时刷新
+  http:
+    encoding:
+      charset: UTF-8
+# 配置验证码的访问路径
+app:
+  login:
+    uri: /auth/login
