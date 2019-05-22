@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Override
-    public int saveUser(UserEntity userEntity){
+    public int saveUser(UserEntity userEntity) {
         log.info("主数据库对User Save");
         return userDao.saveUser(userEntity);
     }

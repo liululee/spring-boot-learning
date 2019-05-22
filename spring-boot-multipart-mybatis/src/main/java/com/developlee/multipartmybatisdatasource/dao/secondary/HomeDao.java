@@ -11,5 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface HomeDao {
     int saveHome(HomeEntity homeEntity);
+
     HomeEntity getHomeByUserId(Long userId);
 }

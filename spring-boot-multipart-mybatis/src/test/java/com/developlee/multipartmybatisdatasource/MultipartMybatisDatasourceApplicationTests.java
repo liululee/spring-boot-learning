@@ -1,13 +1,9 @@
 package com.developlee.multipartmybatisdatasource;
 
-import com.developlee.multipartmybatisdatasource.dao.primary.UserDao;
-import com.developlee.multipartmybatisdatasource.dao.secondary.HomeDao;
-import com.developlee.multipartmybatisdatasource.entity.secondary.HomeEntity;
 import com.developlee.multipartmybatisdatasource.entity.primary.UserEntity;
-import com.developlee.multipartmybatisdatasource.service.HomeService;
+import com.developlee.multipartmybatisdatasource.entity.secondary.HomeEntity;
 import com.developlee.multipartmybatisdatasource.service.impl.HomeServiceImpl;
 import com.developlee.multipartmybatisdatasource.service.impl.UserServiceImpl;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +18,7 @@ public class MultipartMybatisDatasourceApplicationTests {
     UserServiceImpl userService;
     @Autowired
     HomeServiceImpl homeService;
+
     @Test
     public void contextLoads() {
         UserEntity userEntity = new UserEntity();
@@ -34,11 +31,11 @@ public class MultipartMybatisDatasourceApplicationTests {
         homeEntity.setCity("杭州");
         homeEntity.setTown("西湖区");
 
-         userService.saveUser(userEntity);
-         homeService.saveHome(homeEntity);
+        userService.saveUser(userEntity);
+        homeService.saveHome(homeEntity);
 
-         userService.getUserById(1L);
-         homeService.getHomeByUserId(1L);
+        userService.getUserById(1L);
+        homeService.getHomeByUserId(1L);
     }
 
 }

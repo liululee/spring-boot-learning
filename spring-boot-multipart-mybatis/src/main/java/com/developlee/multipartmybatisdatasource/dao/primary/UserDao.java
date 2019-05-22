@@ -11,5 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao {
     int saveUser(UserEntity userEntity);
+
     UserEntity getUserById(Long id);
 }

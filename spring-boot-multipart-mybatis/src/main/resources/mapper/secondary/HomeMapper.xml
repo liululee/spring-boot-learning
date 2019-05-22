@@ -5,7 +5,8 @@
         insert into tb_home (id, city, town, userId) VALUES
         (#{id}, #{city}, #{town}, #{userId})
     </insert>
-    <select id="getHomeByUserId" parameterType="java.lang.Long" resultType="com.developlee.multipartmybatisdatasource.entity.secondary.HomeEntity">
-        select * from  tb_home where userId = #{userId}
+    <select id="getHomeByUserId" parameterType="java.lang.Long"
+            resultType="com.developlee.multipartmybatisdatasource.entity.secondary.HomeEntity">
+        select * from tb_home where userId = #{userId}
     </select>
 </mapper>

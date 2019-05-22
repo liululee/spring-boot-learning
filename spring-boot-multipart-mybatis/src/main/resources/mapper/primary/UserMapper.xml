@@ -4,7 +4,8 @@
     <insert id="saveUser" parameterType="com.developlee.multipartmybatisdatasource.entity.primary.UserEntity">
         INSERT INTO tb_user (`id`, `name`, `mobile`) VALUES (#{id}, #{name}, #{mobile})
     </insert>
-    <select id="getUserById" parameterType="java.lang.Long" resultType="com.developlee.multipartmybatisdatasource.entity.primary.UserEntity">
+    <select id="getUserById" parameterType="java.lang.Long"
+            resultType="com.developlee.multipartmybatisdatasource.entity.primary.UserEntity">
         SELECT * from tb_user where id = #{id}
     </select>
 </mapper>
