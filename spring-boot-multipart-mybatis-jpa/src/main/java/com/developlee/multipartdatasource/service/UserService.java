@@ -5,5 +5,6 @@ import com.developlee.multipartdatasource.entity.mybatis.master.MybatisUserEntit
 
 public interface UserService {
     void saveUserByJpa(UserEntity userEntity);
+
     void saveUserByMybatis(MybatisUserEntity mybatisUserEntity);
 }

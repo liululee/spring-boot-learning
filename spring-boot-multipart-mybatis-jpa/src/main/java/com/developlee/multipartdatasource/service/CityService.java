@@ -10,5 +10,6 @@ import com.developlee.multipartdatasource.entity.mybatis.cluster.MybatisCityEnti
  */
 public interface CityService {
     void saveCityByJpa(CityEntity cityEntity);
+
     void saveCityByMybatis(MybatisCityEntity mybatisCityEntity);
 }

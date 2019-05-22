@@ -1,6 +1,5 @@
 package com.developlee.multipartdatasource.config.jpa;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
@@ -26,8 +25,8 @@ import javax.sql.DataSource;
 @EnableJpaRepositories(
         entityManagerFactoryRef = "primaryEntityManagerFactory",
         transactionManagerRef = "primaryTransactionManager",
-        basePackages = { PrimaryDataSourceConfig.REPO_PACKAGE } // 设置 Repository 所在位置
-        )
+        basePackages = {PrimaryDataSourceConfig.REPO_PACKAGE} // 设置 Repository 所在位置
+)
 public class PrimaryDataSourceConfig {
 
     static final String REPO_PACKAGE = "com.developlee.multipartdatasource.dao.jpa.primary";
@@ -43,7 +42,7 @@ public class PrimaryDataSourceConfig {
     @Primary
     @Bean(name = "primaryEntityManager")
     public EntityManager primaryEntityManager(EntityManagerFactoryBuilder builder) {
-       return primaryEntityManagerFactory(builder).getObject().createEntityManager();
+        return primaryEntityManagerFactory(builder).getObject().createEntityManager();
     }
 
     @Primary
