@@ -9,7 +9,7 @@ public class HelloService {
 
     private String msg;
 
-    private String sayHello (){
+    private String sayHello() {
         return "Hello" + msg;
     }
 
