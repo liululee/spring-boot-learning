@@ -34,9 +34,9 @@ public class QuartzConfiguration {
     }
 
     /**
-     * @desc 这里也可以直接写成quartz.properties。方便管理
      * @return
      * @throws IOException
+     * @desc 这里也可以直接写成quartz.properties。方便管理
      */
     @Bean
     public Properties quartzProperties() throws IOException {

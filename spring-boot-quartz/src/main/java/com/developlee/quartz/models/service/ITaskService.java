@@ -11,29 +11,29 @@ import java.util.List;
  */
 public interface ITaskService {
     /**
-     * @// TODO: 2018/6/1 查询定时任务队列
      * @param taskEntity
      * @return
+     * @// TODO: 2018/6/1 查询定时任务队列
      */
     List<TaskEntity> findTaskList(TaskEntity taskEntity);
 
 
     /**
-     * @// TODO: 2018/6/1 停止任务
      * @param taskEntity
+     * @// TODO: 2018/6/1 停止任务
      */
     Boolean pauseTask(TaskEntity taskEntity);
 
     /**
-     * @// TODO: 2018/6/1 重建任务
      * @param taskEntity
+     * @// TODO: 2018/6/1 重建任务
      */
     Boolean updateTask(TaskEntity taskEntity);
 
     /**
-     * @// TODO: 2018/6/5 删除任务
      * @param taskEntity
      * @return
+     * @// TODO: 2018/6/5 删除任务
      */
     Boolean deleteTask(TaskEntity taskEntity);
 
@@ -41,9 +41,9 @@ public interface ITaskService {
     Boolean addTask(TaskEntity taskEntity);
 
     /**
-     * @// TODO: 2018/6/8 恢复定时任务
      * @param taskEntity
      * @return
+     * @// TODO: 2018/6/8 恢复定时任务
      */
     Boolean resumeTask(TaskEntity taskEntity);
 }

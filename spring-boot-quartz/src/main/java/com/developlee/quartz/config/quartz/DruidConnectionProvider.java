@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 /**
  * @author Lensen
- * @desc  Druid连接池的Quartz扩展类
+ * @desc Druid连接池的Quartz扩展类
  * @since 2018/8/8 12:36
  */
 public class DruidConnectionProvider implements ConnectionProvider {
