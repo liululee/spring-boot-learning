@@ -1,4 +1,4 @@
-//package com.developlee.springsecuritypart1.service;
+//package com.developlee.springsecuritypart1.com.linking.springsecurityremeberme.service;
 //
 //import lombok.extern.slf4j.Slf4j;
 //import org.springframework.security.core.authority.AuthorityUtils;
