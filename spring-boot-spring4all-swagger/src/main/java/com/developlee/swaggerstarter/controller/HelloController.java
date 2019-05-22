@@ -15,6 +15,6 @@ public class HelloController {
 
     @GetMapping(value = "hello")
     public ResponseEntity sayHello() {
-        return new ResponseEntity("hello",HttpStatus.OK);
+        return new ResponseEntity("hello", HttpStatus.OK);
     }
 }
