@@ -30,6 +30,6 @@ public class AppController {
         String str2 = "twoAppConfig: " + twoAppConfig.getTwoAppWelcomePerson() + twoAppConfig.getTwoAppWelcomeMessage();
 
         String str3 = "threeConfig: " + threeConfig.getMyName();
-        return new ResponseEntity(str1 +"~~~~~~~"+ str2 + "_________" +str3, HttpStatus.OK);
+        return new ResponseEntity(str1 + "~~~~~~~" + str2 + "_________" + str3, HttpStatus.OK);
     }
 }
