@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.developlee</groupId>
-    <artifactId>redis</artifactId>
+    <artifactId>spring-boot-redis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>redis</name>
+    <name>spring-boot-redis</name>
     <description>Spring Boot With Redis</description>
 
     <parent>
