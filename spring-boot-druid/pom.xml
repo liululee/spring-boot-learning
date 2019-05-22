@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.developlee</groupId>
-    <artifactId>druid</artifactId>
+    <artifactId>spring-boot-druid</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>druid</name>
+    <name>spring-boot-druid</name>
     <description>Spring Boot With Druid</description>
 
     <parent>
