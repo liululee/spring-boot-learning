@@ -1,14 +1,10 @@
 package com.developlee.errorhandle.controller;
 
 import com.developlee.errorhandle.exception.CustomException;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-
-import java.util.Map;
 
 /**
  * @author Lensen
@@ -24,7 +20,7 @@ public class DemoController {
      */
 
     @GetMapping("/one")
-    public String testError(ModelMap modelMap ) {
+    public String testError(ModelMap modelMap) {
         throw new CustomException(500L, "系统发生500异常！" + modelMap.get("attribute"));
     }
 
