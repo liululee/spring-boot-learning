@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 4.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.developlee.mybatispagehelper.dao.UserDao">
-    <select id="getUserListWithPage" parameterType="com.developlee.mybatispagehelper.domain.UserEntity" resultType="com.developlee.mybatispagehelper.domain.UserEntity">
+    <select id="getUserListWithPage" parameterType="com.developlee.mybatispagehelper.domain.UserEntity"
+            resultType="com.developlee.mybatispagehelper.domain.UserEntity">
         SELECT * FROM tb_user
     </select>
 </mapper>

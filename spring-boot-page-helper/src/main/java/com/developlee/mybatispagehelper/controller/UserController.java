@@ -22,16 +22,17 @@ public class UserController {
     private UserServiceImpl userService;
 
     @GetMapping("/userList")
-    public ResponseEntity userList (){
+    public ResponseEntity userList() {
         UserEntity userEntity = new UserEntity();
         List<UserEntity> userEntityList = userService.findUserListByPage(userEntity);
         //Log.info(userEntityList);
         return new ResponseEntity(userEntityList, HttpStatus.OK);
     }
+
     @PostMapping("/queryList")
     public ResponseEntity queryList(@RequestBody UserEntity userEntity) {
         List<UserEntity> userEntities = userService.findUserListByPage(userEntity);
-        return new ResponseEntity( new PageEntity<>(userEntities), HttpStatus.OK);
+        return new ResponseEntity(new PageEntity<>(userEntities), HttpStatus.OK);
     }
 
 }
