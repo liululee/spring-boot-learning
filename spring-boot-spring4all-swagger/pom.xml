@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.developlee</groupId>
-    <artifactId>swagger-starter</artifactId>
+    <artifactId>spring-boot-spring4all-swagger</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>swagger-starter</name>
+    <name>spring-boot-spring4all-swagger</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
