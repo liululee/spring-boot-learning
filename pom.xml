@@ -9,9 +9,27 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>spring-boot-learning</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
 
+    <modules>
+        <module>spring-boot-custom-config</module>
+        <module>spring-boot-druid</module>
+        <module>spring-boot-handle-error</module>
+        <module>spring-boot-multipart-jpa</module>
+        <module>spring-boot-multipart-mybatis</module>
+        <module>spring-boot-multipart-mybatis-jpa</module>
+        <module>spring-boot-page-helper</module>
+        <module>spring-boot-quartz</module>
+        <module>spring-boot-rabbit-mq</module>
+        <module>spring-boot-redis</module>
+        <module>spring-boot-spring4all-swagger</module>
+        <module>spring-boot-starter-demo</module>
+        <module>spring-boot-swagger</module>
+        <module>spring-security-authentication</module>
+        <module>spring-security-http-basic</module>
+        <module>spring-security-login</module>
+        <module>spring-security-remember-me</module>
+        <module>spring-security-validate-code</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
