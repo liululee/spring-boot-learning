@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.developlee</groupId>
-    <artifactId>rabbitmq</artifactId>
+    <artifactId>spring-boot-rabbit-mq</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>rabbitmq</name>
+    <name>spring-boot-rabbit-mq</name>
     <description>Demo project for Spring Boot</description>
 
 
