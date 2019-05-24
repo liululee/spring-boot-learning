@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.developlee</groupId>
-    <artifactId>error-handle</artifactId>
+    <artifactId>spring-boot-handle-error</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>error-handle</name>
+    <name>spring-boot-handle-error</name>
     <description>Use @ControllerAdvice Or Aspect Handle Your App&#39;s Errors</description>
 
     <parent>
