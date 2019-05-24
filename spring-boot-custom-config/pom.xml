@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.developlee</groupId>
-    <artifactId>custom-config</artifactId>
+    <artifactId>spring-boot-custom-config</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>custom-config</name>
+    <name>spring-boot-custom-config</name>
     <description>diy your configurations</description>
 
     <parent>
