@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.developlee</groupId>
-    <artifactId>spring-security-part1</artifactId>
+    <artifactId>spring-security-http-basic</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>spring-security-part1</name>
+    <name>spring-security-http-basic</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
