@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.liululee</groupId>
-    <artifactId>spring-security-part4</artifactId>
+    <artifactId>spring-security-validate-code</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-security-part4</name>
+    <name>spring-security-validate-code</name>
     <description>demo project of spring security</description>
 
     <properties>
