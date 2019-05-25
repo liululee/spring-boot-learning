@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.developlee</groupId>
-    <artifactId>activemq</artifactId>
+    <artifactId>spring-boot-active-mq</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>activemq</name>
+    <name>spring-boot-active-mq</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
