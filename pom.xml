@@ -24,11 +24,14 @@
         <module>spring-boot-spring4all-swagger</module>
         <module>spring-boot-starter-demo</module>
         <module>spring-boot-swagger</module>
+        <module>spring-boot-elk-log</module>
         <module>spring-security-authentication</module>
         <module>spring-security-http-basic</module>
         <module>spring-security-login</module>
         <module>spring-security-remember-me</module>
         <module>spring-security-validate-code</module>
+        <module>spring-security-permissions</module>
+        <module>spring-social-github</module>
     </modules>
 
     <parent>
