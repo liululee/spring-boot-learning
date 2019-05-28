@@ -1,6 +1,6 @@
 package com.developlee.springsecuritypermissions.repository;
 
-import com.developlee.springsecuritypermissions.domain.UserEntity;
+import com.developlee.springsecuritypermissions.domain.po.UserEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

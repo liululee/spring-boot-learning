@@ -1,5 +1,6 @@
 package com.developlee.springsecuritypermissions.domain;
 
+import com.developlee.springsecuritypermissions.domain.po.UserEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

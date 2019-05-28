@@ -1,6 +1,6 @@
-package com.developlee.springsecuritypermissions.domain;
+package com.developlee.springsecuritypermissions.domain.po;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -10,6 +10,10 @@ import javax.persistence.*;
  * @description:
  **/
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "tb_users")
 public class UserEntity {

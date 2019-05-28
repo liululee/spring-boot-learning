@@ -1,7 +1,7 @@
 package com.developlee.springsecuritypermissions.service;
 
 import com.developlee.springsecuritypermissions.domain.UserDetailsImpl;
-import com.developlee.springsecuritypermissions.domain.UserEntity;
+import com.developlee.springsecuritypermissions.domain.po.UserEntity;
 import com.developlee.springsecuritypermissions.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
