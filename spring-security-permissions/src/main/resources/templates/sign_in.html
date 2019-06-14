@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>sign_in</title>
+    <style>
+        .container{
+            width:200px;
+            border:1px solid red;
+            margin:0 auto;
+        }
+    </style>
 </head>
 <body>
   <div class="container">
      <form action="/login" method="post">
-         <input type="text" name="username" placeholder="Please enter your username" />
-         <input type="password" name="password" placeholder="Please enter your username" />
-         <input type="button" name="submit">
+         <input type="text" name="username" placeholder="Please enter your username" /><br>
+         <input type="password" name="password" placeholder="Please enter your password" /><br>
+         <input type="submit" value="Login">
      </form>
   </div>
 </body>

@@ -21,7 +21,7 @@ import java.util.Set;
 public class ResourceEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     // 资源链接

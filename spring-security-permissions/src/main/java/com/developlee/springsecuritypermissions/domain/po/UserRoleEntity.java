@@ -19,12 +19,14 @@ import javax.persistence.*;
 public class UserRoleEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "user_id")
+    @JoinColumn(name = "user_id")
+    @ManyToOne(cascade = CascadeType.ALL, targetEntity = UserEntity.class)
     private UserEntity userEntity;
 
-    @Column(name = "role_id")
+    @JoinColumn(name = "role_id")
+    @ManyToOne(targetEntity = RoleEntity.class, cascade = CascadeType.ALL)
     private RoleEntity roleEntity;
 }
