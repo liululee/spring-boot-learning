@@ -20,11 +20,13 @@
         <module>spring-boot-page-helper</module>
         <module>spring-boot-quartz</module>
         <module>spring-boot-rabbit-mq</module>
+        <module>spring-boot-active-mq</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-spring4all-swagger</module>
         <module>spring-boot-starter-demo</module>
         <module>spring-boot-swagger</module>
         <module>spring-boot-elk-log</module>
+        <module>spring-boot-message-converter</module>
         <module>spring-security-authentication</module>
         <module>spring-security-http-basic</module>
         <module>spring-security-login</module>
