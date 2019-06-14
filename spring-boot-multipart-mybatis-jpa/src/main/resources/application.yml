@@ -2,25 +2,25 @@ spring:
   ## multipart datasource configuration ##
   datasource:
     primary:
-      jdbc-url: jdbc:mysql://localhost:3306/javashop
+      jdbc-url: jdbc:mysql://localhost:3306/spring-boot-learning
       username: root
       password: 123456
       driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
     secondary:
-      jdbc-url: jdbc:mysql://localhost:3306/test
+      jdbc-url: jdbc:mysql://localhost:3306/spring-boot-learning
       username: root
       password: 123456
       driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
     master:
-      jdbc-url: jdbc:mysql://localhost:3306/javashop
+      jdbc-url: jdbc:mysql://localhost:3306/spring-boot-learning
       username: root
       password: 123456
       driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
     cluster:
-      jdbc-url: jdbc:mysql://localhost:3306/test
+      jdbc-url: jdbc:mysql://localhost:3306/spring-boot-learning-cluster
       username: root
       password: 123456
       driver-class-name: com.mysql.jdbc.Driver
