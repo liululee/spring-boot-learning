@@ -1,7 +1,7 @@
 ## primary datasource
 primary:
   datasource:
-    url: jdbc:mysql://localhost:3306/javashop?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/spring-boot-learning?useUnicode=true&characterEncoding=utf8
     username: root
     password: 123456
     driverClassName: com.mysql.jdbc.Driver
@@ -9,7 +9,7 @@ primary:
 ## secondary datasource
 secondary:
   datasource:
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/spring-boot-learning?useUnicode=true&characterEncoding=utf8
     username: root
     password: 123456
     driverClassName: com.mysql.jdbc.Driver
