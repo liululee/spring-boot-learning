@@ -11,6 +11,7 @@
     <name>spring-boot-learning</name>
 
     <modules>
+        <module>spring-boot-batch</module>
         <module>spring-boot-custom-config</module>
         <module>spring-boot-druid</module>
         <module>spring-boot-handle-error</module>
