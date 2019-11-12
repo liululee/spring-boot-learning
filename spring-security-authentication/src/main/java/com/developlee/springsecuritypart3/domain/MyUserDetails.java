@@ -1,5 +1,7 @@
 package com.developlee.springsecuritypart3.domain;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -51,5 +53,23 @@ public class MyUserDetails implements UserDetails {
     @Override
     public boolean isEnabled() {
         return user.isEnabled();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        boolean isEqual = false;
+        if (obj != null && MyUserDetails.class.isAssignableFrom(obj.getClass())) {
+            MyUserDetails details = (MyUserDetails) obj;
+            isEqual = new EqualsBuilder().append(details.user.getId(), this.user.getId())
+                    .append(details.user.getUsername(), this.user.getUsername()).append(details.user.getPassword(), this.user.getPassword()).isEquals();
+        }
+        return isEqual;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(user.getId()).append(user.getUsername()).append(user.getPassword())
+                .toHashCode();
     }
 }

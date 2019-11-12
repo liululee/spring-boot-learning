@@ -3,7 +3,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://120.79.222.252:3306/test
+    url: jdbc:mysql://localhost:3306/spring_boot_learning
     hikari:
       minimum-idle: 1
       max-lifetime: 3000

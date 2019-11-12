@@ -95,7 +95,7 @@ public class IndexController {
     public List solrSearch() throws IOException, SolrServerException {
         SolrQuery solrQuery  = new SolrQuery();
         solrQuery.setQuery("*:*");
-//        solrQuery.addField("*");
+        /// solrQuery.addField("*");
         solrQuery.add("q","id:4567");
 
         solrQuery.setSort("id", SolrQuery.ORDER.asc);
