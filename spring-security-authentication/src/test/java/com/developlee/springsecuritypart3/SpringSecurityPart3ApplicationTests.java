@@ -23,4 +23,5 @@ public class SpringSecurityPart3ApplicationTests {
         String password = "123456";
         System.out.println("加密后密码：" + passwordEncoder.encode(password));
     }
+
 }
