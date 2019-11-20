@@ -1,15 +1,13 @@
-package com.developlee.springdocopenapi.controller;
+package com.developlee.springbootopenapi.controller;
 
-import com.developlee.springdocopenapi.entity.Ball;
-import com.developlee.springdocopenapi.except.BallNotFoundException;
-import com.developlee.springdocopenapi.repository.BallRepository;
+import com.developlee.springbootopenapi.entity.Ball;
+import com.developlee.springbootopenapi.except.BallNotFoundException;
+import com.developlee.springbootopenapi.repository.BallRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/ball")
@@ -25,7 +23,7 @@ public class BallController {
     }
 
     @GetMapping("/")
-    public List<Ball> findBalls() {
+    public Collection<Ball> findBalls() {
         return ballRepository.getBalls();
     }
 

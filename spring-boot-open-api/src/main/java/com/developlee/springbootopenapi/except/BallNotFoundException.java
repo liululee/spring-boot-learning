@@ -1,4 +1,4 @@
-package com.developlee.springdocopenapi.except;
+package com.developlee.springbootopenapi.except;
 
 public class BallNotFoundException extends RuntimeException {
 

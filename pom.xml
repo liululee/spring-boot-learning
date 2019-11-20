@@ -36,6 +36,7 @@
         <module>spring-security-permissions</module>
         <module>spring-social-github</module>
         <module>spring-boot-assembly</module>
+        <module>spring-boot-open-api</module>
     </modules>
 
     <parent>
