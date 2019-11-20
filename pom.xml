@@ -35,6 +35,7 @@
         <module>spring-security-validate-code</module>
         <module>spring-security-permissions</module>
         <module>spring-social-github</module>
+        <module>spring-boot-assembly</module>
     </modules>
 
     <parent>
