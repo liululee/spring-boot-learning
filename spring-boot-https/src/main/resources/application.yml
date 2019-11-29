@@ -1,0 +1,12 @@
+spring:
+  http:
+    encoding:
+      charset: UTF-8
+server:
+  port: 8443
+  http:
+    port: 8084
+  ssl:
+    key-store: classpath:2435504_sgdc.ywfls.com.pfx
+    key-store-password: vBs9934J
+    key-store-type: PKCS12

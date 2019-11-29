@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://120.79.222.252:3306/javashop
+    url: jdbc:mysql://localhost:3306/javashop
     driver-class-name: com.mysql.jdbc.Driver
   http:
     encoding:
