@@ -1,0 +1,11 @@
+spring:
+  mail:
+    host: smtp.163.com
+    username: developlee@163.com
+    password: liululi888
+    properties.mail.smtp.port: 465
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    default-encoding: UTF-8
+    from: developlee@163.com
