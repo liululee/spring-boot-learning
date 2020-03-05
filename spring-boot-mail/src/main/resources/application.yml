@@ -2,7 +2,7 @@ spring:
   mail:
     host: smtp.163.com
     username: developlee@163.com
-    password: liululi888
+    password: abcded  # 填写自己的密码
     properties.mail.smtp.port: 465
     properties.mail.smtp.starttls.enable: true
     properties.mail.smtp.starttls.required: true
