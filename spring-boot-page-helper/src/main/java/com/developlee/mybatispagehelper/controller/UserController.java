@@ -25,7 +25,6 @@ public class UserController {
     public ResponseEntity userList() {
         UserEntity userEntity = new UserEntity();
         List<UserEntity> userEntityList = userService.findUserListByPage(userEntity);
-        //Log.info(userEntityList);
         return new ResponseEntity(userEntityList, HttpStatus.OK);
     }
 
