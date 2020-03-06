@@ -37,6 +37,9 @@
         <module>spring-social-github</module>
         <module>spring-boot-assembly</module>
         <module>spring-boot-open-api</module>
+        <module>spring-boot-https</module>
+        <module>spring-boot-solr</module>
+        <module>spring-boot-mail</module>
     </modules>
 
     <parent>
