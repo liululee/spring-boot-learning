@@ -3,10 +3,11 @@ spring:
     encoding:
       charset: UTF-8
 server:
-  port: 8443
+  port: 443
   http:
-    port: 8084
+    port: 8080
   ssl:
-    key-store: classpath:2435504_sgdc.ywfls.com.pfx
-    key-store-password: vBs9934J
+    key-store: classpath:ssh.keystore
+    key-store-password: 123456
     key-store-type: PKCS12
+    key-alias: tomcat
