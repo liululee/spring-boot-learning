@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://lcoalhost:3306/springbootehcache?serverTimezone=GMT%2b8&useUnicode=true&characterEncoding=UTF-8
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      username: root
+      password: 123456
+      minimum-idle: 1
+      maximum-pool-size: 50
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:/ehcache.xml
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8080
